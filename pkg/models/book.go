@@ -1,8 +1,8 @@
 package models
 
 import (
-	"github.com/akhil/go-bookstore/pkg/config"
 	"github.com/jinzhu/gorm"
+	"github.com/sophiewanjiku/go-bookstore/pkg/config"
 )
 
 var db *gorm.DB
@@ -18,8 +18,4 @@ func init() {
 	config.Connect()
 	db = config.GetDB()
 	db.AutoMigrate(&Book{})
-}
-
-func main() {
-
 }
